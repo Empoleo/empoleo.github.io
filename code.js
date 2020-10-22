@@ -18,12 +18,6 @@ var begin = false;
 
 var floors = makeText("Floor: 1", 1700, 70, 80, "VT323", "white", 1)
 
-song = new Audio("music/music.mp3");
-song.volume = 0.3
-song.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
 
 
 var shots = [];
@@ -592,7 +586,16 @@ start();
 
 beginTxt.addEventListener('click', function () {
 start();
+beginTxt.addEventListener('click', function () {
+    song = new Audio("music/music.mp3");
+song.volume = 0.3
+song.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
 song.play();
+start();
+});
 });
 
 InfoBt.addEventListener('click', function () {
