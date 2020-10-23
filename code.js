@@ -590,9 +590,10 @@ start();
 
 beginTxt.addEventListener('click', function () {
 start();
-    song.play();
     song = new Audio("music/music.mp3");
+    
 song.volume = 0.3
+       song.play();
 song.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
