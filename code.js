@@ -586,6 +586,7 @@ start();
 
 beginTxt.addEventListener('click', function () {
 start();
+}
 beginTxt.addEventListener('click', function () {
     song = new Audio("music/music.mp3");
 song.volume = 0.3
